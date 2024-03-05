@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'my_garden.dart';
-
 class HomePage extends StatelessWidget {
   const HomePage({
     super.key,

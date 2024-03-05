@@ -100,7 +100,7 @@ class _AddGardenState extends State<AddGarden> {
 
                       }
                     },
-                    child: Text('Enregistrer')
+                    child: const Text('Enregistrer')
                 ),
               )
             ],
