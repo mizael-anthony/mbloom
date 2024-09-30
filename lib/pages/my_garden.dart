@@ -9,16 +9,19 @@ class MyGarden extends StatefulWidget {
 }
 
 class _MyGardenState extends State<MyGarden> {
-
   final List<Garden> gardens = [
-    Garden(name: "Jardin potager", description: "C'est un jardin", img: "fruit"),
-    Garden(name: "Jardin aromatique", description: "C'est un jardin", img: "legume"),
-    Garden(name: "Jardin fleuri", description: "C'est un jardin", img: "fleurs"),
+    Garden(
+        name: "Jardin potager", description: "C'est un jardin", img: "fruit"),
+    Garden(
+        name: "Jardin aromatique",
+        description: "C'est un jardin",
+        img: "legume"),
+    Garden(
+        name: "Jardin fleuri", description: "C'est un jardin", img: "fleurs"),
   ];
 
   @override
   Widget build(BuildContext context) {
-
     Future<void> _showGardenInfo(Garden garden) async {
       return showDialog<void>(
         context: context,
@@ -51,7 +54,7 @@ class _MyGardenState extends State<MyGarden> {
     return Center(
       child: ListView.builder(
         itemCount: gardens.length,
-        itemBuilder: (context, index){
+        itemBuilder: (context, index) {
           final garden = gardens[index];
           final name = garden.name;
           final description = garden.description;
@@ -73,4 +76,3 @@ class _MyGardenState extends State<MyGarden> {
     );
   }
 }
-

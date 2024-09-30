@@ -15,10 +15,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   int _currentIndex = 0;
 
-  setCurrentIndex(int index){
+  setCurrentIndex(int index) {
     setState(() {
       _currentIndex = index;
     });
@@ -30,34 +29,24 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: [
-            Text('Acceuil'),
-            Text('Liste des jardins'),
-            Text('Formulaire')
+            const Text('Acceuil'),
+            const Text('Liste des jardins'),
+            const Text('Formulaire')
           ][_currentIndex],
         ),
         body: [
-          HomePage(),
-          MyGarden(),
-          AddGarden()
-
+          const HomePage(),
+          const MyGarden(),
+          const AddGarden()
         ][_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentIndex,
           selectedItemColor: Colors.green,
           unselectedItemColor: Colors.grey,
           items: const [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Acceuil'
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.list),
-                label: 'Jardins'
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.add),
-                label: 'Ajout'
-            ),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Acceuil'),
+            BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Jardins'),
+            BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Ajout'),
           ],
           onTap: (index) => setCurrentIndex(index),
         ),
@@ -65,4 +54,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
